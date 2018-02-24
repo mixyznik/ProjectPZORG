@@ -29,7 +29,7 @@
  
       componentDidMount(){
         $.ajax({
-          url: 'http://api.nytimes.com/svc/archive/v1/'+$('#msg').val()+'/'+$('#msg1').val()+'.json?api-key=d4235d9ad3454af58c5afd2951fa7b03',
+          url: 'https://api.nytimes.com/svc/archive/v1/'+$('#msg').val()+'/'+$('#msg1').val()+'.json?api-key=d4235d9ad3454af58c5afd2951fa7b03',
           success:  this.onSuccess
         })
       }
@@ -130,7 +130,7 @@ class Article extends React.Component {
 
         $.ajax({
         /*  url: `http://api.linkpreview.net/?key=5a8c6f397e808b560f6b4a8e44ba5736d6ff6aa644f25&q=${this.props.url}`,*/
-          url: 'http://api.linkpreview.net/?key=123456&q=https://www.google.com',
+          url: 'https://api.linkpreview.net/?key=123456&q=https://www.google.com',
           success: this.onSuccess
         })
 
