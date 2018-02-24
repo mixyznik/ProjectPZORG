@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -8,19 +8,187 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <title>Playground</title>
+    <title>ProjectPzorg</title>
 
     <style type="text/css">
+    body {
+        background-image: url("./Jumbo.jpg");
+        background-repeat: no-repeat, repeat;
+        background-color: #cccccc;
+        background-size: cover;
+        z-index: 1;
+        margin: 0;
+    }
+          #link{
+          	 word-wrap: break-word;
+             width: 70%;
+          }
 
+
+             .aa {
+         width:30%; 
+         height:30%;
+
+      }
+                .flexi {
+        width:25%;
+        height: 300px;
+        display: inline-block; 
+      /*  margin-left: 60px;
+        margin-top: 20px;*/
+       /* border-style: solid;
+        border-width: 1px;
+        border-color: #734547;*/
+        background-image: url("./paper.jpg");
+        background-repeat: no-repeat, repeat;
+         background-size: cover;
+          font-size: 12px;
+         font-weight: bold;
+          cursor: pointer; 
+          opacity: 0.7;
+        
+    }
+              .form-inline {
+        position: center;
+     }
+            #working  {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        opacity: 0.5;
+     }
+        h3,h1 {
+        text-align: center;
+      
+     }
+     p {
+        text-align: center;
+       
+     }
+     #imm {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1px;
+        margin-top: auto;
+     }
+      #msg,#msg1 {
+        width:400px;
+        margin-left: 70px;
+     }  
+       #main {
+       	margin-bottom: 40px;
+       }
+       .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    background-color: #734547;
+    color: white;
+    text-align: center;
+  
+}
+    .header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+   #logo {
+   	
+    display: block;
+     margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    opacity: 0.3;
+     
+
+   }
+        .page {
+            /*Ovo obezbedjuje da su deca page-a iste visine*/
+            display: flex;
+        }
+
+        .master {
+            /*float: left;*/
+            /*width: 70%;*/
+            flex: 1 1 70%;
+             display: flex;
+        }
+
+        .details {
+            /*float: left;*/
+            /*width: 30%;*/
+            flex: 1 1 30%;
+            background-image: url("./paper1.jpg");
+        background-repeat: no-repeat, repeat;
+         background-size: cover;
+        }
+         .scroll {
+        position: sticky;
+        top: 100px;
+        height: 300px;
+     /*   margin-left: 50px;*/
+       /* margin-top: 120px;*/
+        font-size: 16px;
+         font-weight: bold;
+         margin-right: 10px;
+  
+  overflow: hidden;
+  
+  word-break: break-all;
+  hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+         }
+       /*  .flex-container > div {
+            display: inline-block;
+         }*/
+     
     </style>
-</head>
 
-<body>
- <div id="root">
+    <body>
+
+  <div id="wrapper">  	
+       <div class="header" id="myHeader">
+                <form>
+       <div class="form-inline">
+          <div class="col-xs-2">
+            <label for="ex1"></label>
+            <input class="form-control" id="msg" type="number" placeholder="The year (e.g. 2017)">
+            <input class="form-control" id="msg1" type="number" placeholder="The number of month (e.g. 11)">
+            <button type="button" id="btn" class="btn" onclick="search()">Search</button>
+          </div>
+          </div>
+    </form>
+       <img id="logo" src="./logo1.jpg"></img>
+       
+       </div>
+
+
+
+
+
+
+     
+       <div id="main">
+        
+        <div id="root"></div>
+
     </div>
-    <script type="text/babel">    
+        <div class="footer">
+            <p>Footer</p>
+       </div>
+        
+ </div>
 
-</script>
-</body>
+        <script type="text/babel" src='app2.js'>
+        </script>
+
+    </body>
+
 
 </html>
