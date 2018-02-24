@@ -13,7 +13,7 @@
       }
 
         handleTableRowClick(item){
-                // debugger;
+              /*  debugger;*/
                 console.log("Hello from handleTableRowClick!");
                  this.setState({selectedUser: item})
             }
@@ -21,15 +21,15 @@
 
       onSuccess(answer){
         /*console.log(answer);*/
-        const artic = answer.response.docs.slice(1,5);
+        const artic = answer.response.docs.slice(1,11);
         /*console.log(artic)*/
         this.setState({data: artic});
       }
           
- 
+
       componentDidMount(){
         $.ajax({
-          url: 'https://api.nytimes.com/svc/archive/v1/'+$('#msg').val()+'/'+$('#msg1').val()+'.json?api-key=d4235d9ad3454af58c5afd2951fa7b03',
+          url: `http://api.nytimes.com/svc/archive/v1/2017/1.json?api-key=d4235d9ad3454af58c5afd2951fa7b03`,
           success:  this.onSuccess
         })
       }
@@ -40,11 +40,13 @@
            
                 return (
                     <div className="page">
-                        <div className="master">
+                        <div className="flex-container">
+
                              <App selectionHandler={this.handleTableRowClick} data={this.state.data} />
                         </div>
                         <div className="details"><div className="scroll">
                         <UserDetails user={this.state.selectedUser}/></div></div>
+
                     </div>
                 );
             }
@@ -56,15 +58,23 @@
 const UserDetails=(props)=>{
           const user = props.user;
           console.log(user);
+          let headline = "";
+
+          console.log(user.headline);
+          if (user.headline) {
+            headline = user.headline.main;
+        }
             return (
             <div>  <p>Details about article: </p>
                     <ul>
-
+                        <li>Headline: {headline}</li> 
                         <li>Source: {user.source}</li>
                         <li>Section name: {user.section_name}</li>
                         <li>Published: {user.pub_date}</li>
                         <li>Snippet: {user.snippet}</li>
                         <li>URL:<a href= {user.web_url}>{user.web_url}</a></li> 
+                        
+                                                
                        
                         
                     </ul>
@@ -86,7 +96,7 @@ class App extends React.Component {
                   
                     return  (<img className="bb" id="working" src="./Demo1.gif" ></img>)
                 }
-        // console.log(article.web_url);
+       
         return (
           <div>
 
@@ -129,8 +139,8 @@ class Article extends React.Component {
     componentDidMount(){
 
         $.ajax({
-        /*  url: `http://api.linkpreview.net/?key=5a8c6f397e808b560f6b4a8e44ba5736d6ff6aa644f25&q=${this.props.url}`,*/
-          url: 'https://api.linkpreview.net/?key=123456&q=https://www.google.com',
+          url: `http://api.linkpreview.net/?key=5a8c6f397e808b560f6b4a8e44ba5736d6ff6aa644f25&q=${this.props.url}`,
+       /*   url: 'http://api.linkpreview.net/?key=123456&q=https://www.google.com',*/
           success: this.onSuccess
         })
 
@@ -141,7 +151,7 @@ class Article extends React.Component {
      /* console.log(this.state.data.url);
        console.log(this.state.data);*/
          const user = this.props.item;
-         console.log(user);
+        /* console.log(user);*/
         const clickHandler = this.props.clickHandler;
       return (
         <div className="flexi" onClick={() => clickHandler(user)}>
