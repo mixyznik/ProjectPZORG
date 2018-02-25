@@ -18,9 +18,10 @@
 
       }
                 .flexi {
-        width:277px;
+        width:25%;
         height: 300px;
-        display: inline-block; 
+        display: inline-flex; 
+        flex-flow: row wrap;
       /*  margin-left: 60px;
         margin-top: 20px;*/
        /* border-style: solid;
@@ -103,7 +104,8 @@
           float: left;
           width: 70%;
                      
-             display: flex;
+             display:flex;
+             flex-flow: row wrap;
         }
 
         .details {
@@ -134,4 +136,3 @@
        /*  .flex-container > div {
             display: inline-block;
          }*/
-     

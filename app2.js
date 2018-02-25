@@ -29,7 +29,7 @@
 
       componentDidMount(){
         $.ajax({
-          url: `https://api.nytimes.com/svc/archive/v1/2017/1.json?api-key=d4235d9ad3454af58c5afd2951fa7b03`,
+          url: `http://api.nytimes.com/svc/archive/v1/2017/1.json?api-key=d4235d9ad3454af58c5afd2951fa7b03`,
           success:  this.onSuccess
         })
       }
@@ -139,8 +139,8 @@ class Article extends React.Component {
     componentDidMount(){
 
         $.ajax({
-        /*  url: `https://api.linkpreview.net/?key=5a8c6f397e808b560f6b4a8e44ba5736d6ff6aa644f25&q=${this.props.url}`,*/
-          url: 'https://api.linkpreview.net/?key=123456&q=https://www.google.com',
+          url: `http://api.linkpreview.net/?key=5a8c6f397e808b560f6b4a8e44ba5736d6ff6aa644f25&q=${this.props.url}`,
+         /* url: 'http://api.linkpreview.net/?key=123456&q=https://www.google.com',*/
           success: this.onSuccess
         })
 
@@ -155,9 +155,8 @@ class Article extends React.Component {
         const clickHandler = this.props.clickHandler;
       return (
         <div className="flexi" onClick={() => clickHandler(user)}>
-          <p >{this.state.data.title}</p>
-          <p >{this.state.data.description}</p>
-
+          <h3 >{this.state.data.title}</h3><br/>
+          <p >{this.state.data.description}</p><br/>
           <img  className="aa" id="imm" src={this.state.data.image} ></img>
          
         </div>
