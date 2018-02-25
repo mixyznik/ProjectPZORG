@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <title>ProjectPzorg</title>
+
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+<form>
+       <div class="form-inline">
+          <div class="col-xs-2">
+            <label for="ex1"></label>
+            <input class="form-control" id="msg" type="text">
+            <button type="button" class="btn" onclick="opa()">Search</button>
+          </div>
+         
+    </form>
+
+ <div id="searchResults"></div>
+ <p id="root"></p>
+
+    </div>
+    <script type="text/babel">    
+     function opa() {
+         $.ajax({
+                    'url': 'http://api.linkpreview.net/?key=5a8c6f397e808b560f6b4a8e44ba5736d6ff6aa644f25&q=https://www.nytimes.com/2016/11/02/world/americas/canada-patrick-lagace-montreal-police.html',
+                    'success':  function(answer) {
+                     console.log(answer);
+                     console.log(answer.image);
+                     console.log(answer.description);
+                     let b=answer.description;
+                  
+                     let a =answer.image;
+                     var newImg = $("<img>");
+                     newImg.attr("src", a);
+                     $("#searchResults").append(newImg);
+                    }
+                })
+
+          }
+        
+
+</script>
+</body>
+
+</html>
