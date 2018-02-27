@@ -196,9 +196,11 @@ p {
     body {
       width: 100%;	
       background-image: url("./Jumbo.jpg");
-      background-repeat: no-repeat, repeat;
-      background-color: #cccccc;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
       background-size: cover;
+      background-color: #cccccc;
       z-index: 1;
       margin: 0;
       font-family: Georgia, serif;
@@ -263,9 +265,11 @@ p {
     body {
       width: 100%;	
       background-image: url("./Jumbo.jpg");
-      background-repeat: no-repeat, repeat;
-      background-color: #cccccc;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
       background-size: cover;
+      background-color: #cccccc;
       z-index: 1;
       margin: 0;
       font-family: Georgia, serif;
@@ -330,9 +334,11 @@ p {
     body {
       width: 100%;	
       background-image: url("./Jumbo.jpg");
-      background-repeat: no-repeat, repeat;
-      background-color: #cccccc;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
       background-size: cover;
+      background-color: #cccccc;
       z-index: 1;
       margin: 0;
       font-family: Georgia, serif;
