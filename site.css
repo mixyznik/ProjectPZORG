@@ -203,9 +203,11 @@ p {
     body {
       width: 100%;	
       background-image: url("./Jumbo.jpg");
-      background-repeat: no-repeat, repeat;
+      background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
       background-color: #cccccc;
-      background-size: cover;
+     
       z-index: 1;
       margin: 0;
       font-family: Georgia, serif;
@@ -284,10 +286,9 @@ p {
       margin: 0;
       font-family: Georgia, serif;
       font-style: italic;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-      background-size: cover;
+      background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
     }
     #wrapper {
       overflow: hidden;
@@ -359,10 +360,9 @@ p {
     
       background-color: #cccccc;
     
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-      background-size: cover;
+     background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
       z-index: 1;
       margin: 0;
       font-family: Georgia, serif;
