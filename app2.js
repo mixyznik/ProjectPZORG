@@ -163,7 +163,7 @@ class Article extends React.Component {
              this.state.details.det='***Click to hide details!***';
             this.state.color.backgroundColor='#ca4646';
             this.state.color.color='white';
-            this.state.divWrap.backgroundColor="#eee";
+            this.state.divWrap.backgroundColor="#c80e2d";
 
         }       
 
@@ -248,8 +248,7 @@ class Article extends React.Component {
 var page;
 
 console.log(a);
-var a=document.getElementById('msg').value;
-let b=document.getElementById('msg1').value;
+
 function search() {
   var a=document.getElementById('msg').value;
 let b=document.getElementById('msg1').value;
