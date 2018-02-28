@@ -105,7 +105,7 @@ class App extends React.Component {
          if(this.props.data.length ==0){
                    
                   
-                    return  (<img className="bb" id="working" src="./Demo1.gif" ></img>)
+                    return  (<img className="bb" id="working" src="./demo1.gif" ></img>)
                 }
          let counter=0;
         return (
