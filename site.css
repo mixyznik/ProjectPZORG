@@ -238,6 +238,11 @@ background-position:center;
        .api{
          text-align: center;
     }
+     #working {
+      width:280px;
+      height :180px;
+    }
+
 }   
 
 
@@ -320,6 +325,10 @@ margin-bottom: 40px;
     .api{
          text-align: center;
     }
+    #working {
+      width:280px;
+      height :180px;
+    }
 }
 
 
@@ -401,5 +410,9 @@ background-position:center;
     }
        .api{
          text-align: center;
+    }
+     #working {
+      width:280px;
+      height :180px;
     }
 }   
