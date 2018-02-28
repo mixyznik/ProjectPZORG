@@ -105,7 +105,7 @@ class App extends React.Component {
          if(this.props.data.length ==0){
                    
                   
-                    return  (<img className="bb" id="working" src="./demo1.gif" ></img>)
+                    return  (<img className="bb" id="working" src="./Demo1.gif" ></img>)
                 }
          let counter=0;
         return (
@@ -247,10 +247,10 @@ class Article extends React.Component {
 
 var page;
 
-console.log(a);
+/*console.log(a);*/
 
 function search() {
-  var a=document.getElementById('msg').value;
+var a=document.getElementById('msg').value;
 let b=document.getElementById('msg1').value;
   if(a==="" || b==="") {
     alert("put year and month in fields");
@@ -265,7 +265,8 @@ let b=document.getElementById('msg1').value;
   if(page){
     page.refresh();
   } else {
-    page = ReactDOM.render(<Page/>, root);  
+    page = ReactDOM.render(<Page/>, root); 
+
   }
   }
 }

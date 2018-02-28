@@ -1,5 +1,5 @@
 body {
-        background-image: url("./Jumbo.jpg");
+       /* background-image: url("./Jumbo.jpg");*/
         background-repeat: no-repeat, repeat;
         background-color: #cccccc;
         background-size: cover;
@@ -7,6 +7,7 @@ body {
         margin: 0;
         font-family: Georgia, serif;
         font-style: italic;
+        margin-bottom: 40px;
     }
 #wrapper {
         overflow: hidden;
@@ -107,6 +108,7 @@ p {
  .api {
      color:white;
      font-size: 20px;
+    text-align: center;
     }   
  .header {
       padding: 10px 16px;
@@ -209,13 +211,13 @@ p {
         height:30%;
     }
     #msg,#msg1 {
-      width:50px;
-      margin-left: 20px;
+      width:80px;
+      margin-left: 5px;
     }    
     body {
       width: 100%;	
-      background-image: url("./Jumbo.jpg");
-      background-repeat:no-repeat;
+    /*  background-image: url("./Jumbo.jpg");
+      background-repeat:no-repeat;*/
 background-size:contain;
 background-position:center;
       background-color: #cccccc;
@@ -224,6 +226,7 @@ background-position:center;
       margin: 0;
       font-family: Georgia, serif;
       font-style: italic;
+      margin-bottom: 40px;
     }
     #wrapper {
      overflow: hidden;
@@ -231,6 +234,9 @@ background-position:center;
      vertical-align:bottom;
      margin:0 auto;
      height:100%;
+    }
+       .api{
+         text-align: center;
     }
 }   
 
@@ -285,12 +291,12 @@ background-position:center;
         height:30%;
     }
     #msg,#msg1 {
-      width:50px;
+      width:100px;
       margin-left: 20px;
     }    
     body {
       width: 100%;	
-      background-image: url("./Jumbo.jpg");
+      /*background-image: url("./Jumbo.jpg");*/
      
       background-color: #cccccc;
       
@@ -301,6 +307,7 @@ background-position:center;
       background-repeat:no-repeat;
 background-size:contain;
 background-position:center;
+margin-bottom: 40px;
     }
     #wrapper {
       overflow: hidden;
@@ -309,6 +316,9 @@ background-position:center;
       vertical-align:bottom;
       margin:0 auto;
       height:100%;
+    }
+    .api{
+         text-align: center;
     }
 }
 
@@ -368,7 +378,7 @@ background-position:center;
     }    
     body {
       width: 100%;	
-      background-image: url("./Jumbo.jpg");
+     /* background-image: url("./Jumbo.jpg");*/
     
       background-color: #cccccc;
     
@@ -379,6 +389,7 @@ background-position:center;
       margin: 0;
       font-family: Georgia, serif;
       font-style: italic;
+      margin-bottom: 40px;
     }
     #wrapper {
       overflow: hidden;
@@ -387,5 +398,8 @@ background-position:center;
       vertical-align:bottom;
       margin:0 auto;
       height:100%;
+    }
+       .api{
+         text-align: center;
     }
 }   
