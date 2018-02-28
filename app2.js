@@ -37,7 +37,7 @@
         console.log('PAGE: refresh')
 
         $.ajax({
-          url: 'http://api.nytimes.com/svc/archive/v1/'+$('#msg').val()+'/'+$('#msg1').val()+'.json?api-key=d4235d9ad3454af58c5afd2951fa7b03',
+          url: 'https://api.nytimes.com/svc/archive/v1/'+$('#msg').val()+'/'+$('#msg1').val()+'.json?api-key=d4235d9ad3454af58c5afd2951fa7b03',
           success:  this.onSuccess
         })
       }
