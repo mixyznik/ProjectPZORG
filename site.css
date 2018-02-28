@@ -8,9 +8,6 @@ body {
         font-family: Georgia, serif;
         font-style: italic;
     }
-#root {
-        margin-bottom: 40px;
-    }   
 #wrapper {
         overflow: hidden;
         position: relative;
@@ -107,6 +104,10 @@ p {
       background-color: #cccccc;
       background-size: cover;
     } 
+ .api {
+     color:white;
+     font-size: 20px;
+    }   
  .header {
       padding: 10px 16px;
       background-image: url("./paperhead.jpg");
@@ -149,7 +150,15 @@ p {
       overflow: hidden;
       background-color: yellow;
       font-size: 14px;
+      border-bottom: 8px solid red;
+
     } 
+    #ull {
+      margin-right: 10px;
+             overflow: hidden;
+       word-break: break-all;
+       hyphens: auto;
+    }
 @media screen and (max-width: 320px) {
     .flexi {  
       width:100%;
