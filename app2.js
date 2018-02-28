@@ -105,7 +105,7 @@ class App extends React.Component {
          if(this.props.data.length ==0){
                    
                   
-                    return  (<img className="bb" id="working" src="./demo1.gif" ></img>)
+                    return  (<img className="bb" id="working" src="./Demo1.gif" ></img>)
                 }
          let counter=0;
         return (
@@ -261,7 +261,9 @@ let b=document.getElementById('msg1').value;
   console.log('SEARCH')
 
   const root = document.getElementById('root');
-
+  page = ReactDOM.render(<Page/>, root); 
+   page.setState({data: []})
+/*ReactDOM.unmountComponentAtNode(document.getElementById('root'));*/
   if(page){
     page.refresh();
   } else {
