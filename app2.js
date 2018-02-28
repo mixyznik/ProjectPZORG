@@ -256,14 +256,18 @@ let b=document.getElementById('msg1').value;
     alert("put year and month in fields");
  
   }
+  else if(a.length==3 || a.length==2 || a.length==1) {
+    console.log(a);
+    alert('put correct values');
+  }
   else {
 
   console.log('SEARCH')
 
   const root = document.getElementById('root');
   page = ReactDOM.render(<Page/>, root); 
-   page.setState({data: []})
-/*ReactDOM.unmountComponentAtNode(document.getElementById('root'));*/
+  page.setState({data: []})
+
   if(page){
     page.refresh();
   } else {
