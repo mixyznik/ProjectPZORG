@@ -22,7 +22,7 @@
 
       onSuccess(answer){
         /*console.log(answer);*/
-        const artic = answer.response.docs.slice(1,11);
+        const artic = answer.response.docs.slice(1,21);
         /*console.log(artic)*/
         this.setState({data: artic});
       }
@@ -163,7 +163,7 @@ class Article extends React.Component {
              this.state.details.det='***Click to hide details!***';
             this.state.color.backgroundColor='#ca4646';
             this.state.color.color='white';
-            this.state.divWrap.backgroundColor="#c80e2d";
+            this.state.divWrap.backgroundColor="#ebc4a3";
 
         }       
 

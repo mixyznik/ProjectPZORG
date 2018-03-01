@@ -1,5 +1,5 @@
 body {
-       /* background-image: url("./Jumbo.jpg");*/
+        background-image: url("./Jumbo.jpg");
         background-repeat: no-repeat, repeat;
         background-color: #cccccc;
         background-size: cover;
@@ -150,9 +150,9 @@ p {
 .content {
       padding: 0 18px;
       overflow: hidden;
-      background-color: yellow;
+      background-color: #f5d86b;
       font-size: 14px;
-      border-bottom: 8px solid red;
+      border-bottom: 8px solid #ca4646;
 
     } 
     #ull {
@@ -197,7 +197,7 @@ p {
       width: 100%;
     } 
     #wrap {
-      min-height: 400px;
+      min-height: 200px;
       width: 100%;
       display:flex;
       flex-flow:row wrap;
@@ -216,11 +216,11 @@ p {
     }    
     body {
       width: 100%;	
-    /*  background-image: url("./Jumbo.jpg");
-      background-repeat:no-repeat;*/
+     background-image: none;
+      background-repeat:no-repeat;
 background-size:contain;
 background-position:center;
-      background-color: #cccccc;
+      background-color: #ccbb7e;
      
       z-index: 1;
       margin: 0;
@@ -250,7 +250,7 @@ background-position:center;
 @media screen and (min-width: 321px) and (max-width: 480px) {
     .flexi {  
       width:100%;
-       min-height: 400px;
+       min-height: 300px;
        display: inline-flex; 
        flex-flow: row wrap;
        background-image: url("./paper.jpg");
@@ -278,12 +278,12 @@ background-position:center;
       /*padding: 10px 16px;*/
       background-image: url("./paperhead.jpg");
       background-repeat: no-repeat, repeat;
-      background-color: #cccccc;
+      background-color: #ccbb7e;
       background-size: cover;
       width: 100%;
     } 
     #wrap {
-      min-height: 400px;
+      min-height: 300px;
       width: 100%;
       display:flex;
       flex-flow:row wrap;
@@ -302,17 +302,16 @@ background-position:center;
     }    
     body {
       width: 100%;	
-      /*background-image: url("./Jumbo.jpg");*/
+      background-image: none; 
      
-      background-color: #cccccc;
+      background-color: #ccbb7e;
       
       z-index: 1;
       margin: 0;
       font-family: Georgia, serif;
       font-style: italic;
       background-repeat:no-repeat;
-background-size:contain;
-background-position:center;
+      background-size: cover;
 margin-bottom: 40px;
     }
     #wrapper {
@@ -331,13 +330,14 @@ margin-bottom: 40px;
       width:280px;
       height :180px;
     }
+
 }
 
 
 @media screen and (min-width: 480px) and (max-width: 1024px) {
 	.flexi {  
       width:50%;
-       min-height: 400px;
+       min-height: 300px;
        display: inline-flex; 
        flex-flow: row wrap;
        background-image: url("./paper.jpg");
@@ -389,13 +389,12 @@ margin-bottom: 40px;
     }    
     body {
       width: 100%;	
-     /* background-image: url("./Jumbo.jpg");*/
-    
-      background-color: #cccccc;
+      background-image: none; 
+          
+      background-color: #ccbb7e;
     
      background-repeat:no-repeat;
-background-size:contain;
-background-position:center;
+     background-size: cover;
       z-index: 1;
       margin: 0;
       font-family: Georgia, serif;
@@ -418,4 +417,5 @@ background-position:center;
       width:280px;
       height :180px;
     }
+    
 }   
