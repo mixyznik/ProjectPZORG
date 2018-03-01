@@ -259,6 +259,7 @@ let b=document.getElementById('msg1').value;
   else if(a.length==3 || a.length==2 || a.length==1) {
     console.log(a);
     alert('put correct values');
+    a="";
   }
   else {
 
