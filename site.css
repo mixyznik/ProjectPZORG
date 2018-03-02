@@ -89,6 +89,12 @@ p {
        width:350px;
        margin-left: 50px;
     }  
+  #msg:focus{
+   background-color: #dbc8ff; 
+  } 
+  #msg1:focus {
+   background-color: #dbc8ff;
+  }
 #main {
        margin-bottom: 40px;
     }
