@@ -21,8 +21,8 @@
         
         <div class="header" id="myHeader">
         
-            <input class="form-control" id="msg" type="number" placeholder="The year!" min="1851" max="2018" oninput="maxLengthCheck(this)" maxlength = "4">
-            <input class="form-control" id="msg1" type="number" placeholder="The month! " min="1" max="12" oninput="maxCheck(this)">
+            <input class="form-control" id="msg" type="number" placeholder="The year!" min="1851" max="2018" oninput="yearCheck(this)" maxlength = "4">
+            <input class="form-control" id="msg1" type="number" placeholder="The month! " min="1" max="12" oninput="monthCheck(this)">
             <button type="button" id="btn" class="btn" onclick="search()">Search</button><br>
               <h1 class="api">NYT Explorer</h1>
               <p class="api">Fill in the year/month fields and access NY Times archive from 1851-2018.</p>
@@ -54,7 +54,7 @@
  /*This part of code enables that year and moth inputs will be filled only with corect vaules*/
   let year="";
   let month="";
-  function maxLengthCheck(yrInput)
+  function yearCheck(yrInput)
   {
 if (yrInput.value > 2018 ) {
          alert("Must be less than 2018");
@@ -74,7 +74,7 @@ if (yrInput.value > 2018 ) {
     }
   }
 
- function maxCheck(mthInput) {
+ function monthCheck(mthInput) {
 
      let d = new Date();
      let m = d.getMonth();

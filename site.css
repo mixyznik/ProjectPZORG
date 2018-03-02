@@ -204,7 +204,7 @@ p {
       width: 100%;
     } 
     #wrap {
-      min-height: 200px;
+      min-height: 400px;
       width: 100%;
       display:flex;
       flex-flow:row wrap;
@@ -291,7 +291,7 @@ p {
       width: 100%;
     } 
     #wrap {
-      min-height: 300px;
+      min-height: 400px;
       width: 100%;
       display:flex;
       flex-flow:row wrap;
@@ -346,7 +346,7 @@ margin-bottom: 40px;
   /* comes into effect for screens larger than 481 pixels to 1024 pixels*/
 	.flexi {  
       width:50%;
-      min-height: 300px;
+      min-height: 400px;
       display: inline-flex; 
       flex-flow: row wrap;
       background-image: url("./paper.jpg");
