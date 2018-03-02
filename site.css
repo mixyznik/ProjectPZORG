@@ -108,7 +108,7 @@ p {
  .api {
      color:white;
      font-size: 20px;
-    text-align: center;
+     text-align: center;
     }   
  .header {
       padding: 10px 16px;
@@ -157,11 +157,12 @@ p {
     } 
     #ull {
       margin-right: 10px;
-             overflow: hidden;
-       word-break: break-all;
-       hyphens: auto;
+      overflow: hidden;
+      word-break: break-all;
+      hyphens: auto;
     }
 @media screen and (max-width: 320px) {
+  /* CSS for screens that are 320 pixels or less will be put in this section */
     .flexi {  
       width:100%;
        min-height: 400px;
@@ -189,7 +190,7 @@ p {
       height: 18px;
     }  
      .header {
-      /*padding: 10px 16px;*/
+      
       background-image: url("./paperhead.jpg");
       background-repeat: no-repeat, repeat;
       background-color: #cccccc;
@@ -217,10 +218,10 @@ p {
     body {
       width: 100%;	
      background-image: none;
-      background-repeat:no-repeat;
-background-size:contain;
-background-position:center;
-      background-color: #ccbb7e;
+     background-repeat:no-repeat;
+     background-size:contain;
+     background-position:center;
+     background-color: #ccbb7e;
      
       z-index: 1;
       margin: 0;
@@ -235,9 +236,9 @@ background-position:center;
      margin:0 auto;
      height:100%;
     }
-       .api{
-         text-align: center;
-         margin-right: 30px;
+    .api{
+      text-align: center;
+      margin-right: 30px;
     }
      #working {
       width:280px;
@@ -248,8 +249,9 @@ background-position:center;
 
 
 @media screen and (min-width: 321px) and (max-width: 480px) {
+   /* comes into effect for screens between 321 and 480 pixels (inclusive) */
     .flexi {  
-      width:100%;
+       width:100%;
        min-height: 300px;
        display: inline-flex; 
        flex-flow: row wrap;
@@ -293,8 +295,8 @@ background-position:center;
 
     }   
     #wraptext {
-        width:100%;
-        height:30%;
+      width:100%;
+      height:30%;
     }
     #msg,#msg1 {
       width:100px;
@@ -323,8 +325,8 @@ margin-bottom: 40px;
       height:100%;
     }
     .api{
-         text-align: center;
-         margin-right: 30px;
+      text-align: center;
+      margin-right: 30px;
     }
     #working {
       width:280px;
@@ -335,20 +337,21 @@ margin-bottom: 40px;
 
 
 @media screen and (min-width: 480px) and (max-width: 1024px) {
+  /* comes into effect for screens larger than 481 pixels to 1024 pixels*/
 	.flexi {  
       width:50%;
-       min-height: 300px;
-       display: inline-flex; 
-       flex-flow: row wrap;
-       background-image: url("./paper.jpg");
-       background-repeat: no-repeat, repeat;
-       background-size: cover;
-       font-size: 12px;
-       cursor: pointer; 
-       opacity: 0.9;
-       overflow: hidden;
-       word-break: break-all;
-       hyphens: auto;
+      min-height: 300px;
+      display: inline-flex; 
+      flex-flow: row wrap;
+      background-image: url("./paper.jpg");
+      background-repeat: no-repeat, repeat;
+      background-size: cover;
+      font-size: 12px;
+      cursor: pointer; 
+      opacity: 0.9;
+      overflow: hidden;
+      word-break: break-all;
+      hyphens: auto;
       -ms-hyphens: auto;
       -moz-hyphens: auto;
     } 
@@ -393,8 +396,8 @@ margin-bottom: 40px;
           
       background-color: #ccbb7e;
     
-     background-repeat:no-repeat;
-     background-size: cover;
+      background-repeat:no-repeat;
+      background-size: cover;
       z-index: 1;
       margin: 0;
       font-family: Georgia, serif;
@@ -409,9 +412,9 @@ margin-bottom: 40px;
       margin:0 auto;
       height:100%;
     }
-       .api{
-         text-align: center;
-         margin-right: 30px;
+    .api{
+      text-align: center;
+      margin-right: 30px;
     }
      #working {
       width:280px;

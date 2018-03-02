@@ -51,42 +51,54 @@
     
     </div>
     <script>
- 
+ /*This part of code enables that year and moth inputs will be filled only with corect vaules*/
   let year="";
   let month="";
-  function maxLengthCheck(object)
+  function maxLengthCheck(yrInput)
   {
-if (object.value > 2018 ) {
-         alert("must be less than 2018");
-         object.value=""; 
+if (yrInput.value > 2018 ) {
+         alert("Must be less than 2018");
+         yrInput.value=""; 
        }
-  else if (object.value.length==4 && object.value <1851) {
-         alert("must be more than 1851");
-        object.value=""; 
+
+  else if (yrInput.value.length==4 && yrInput.value <1851) {
+         alert("Must be more than 1851");
+        yrInput.value=""; 
   }
-  else if(object.value==2018 && month>2){
-         alert("we REALLY dont have articles of future");  
-         object.value="";
+  else if(yrInput.value==2018 && month>2){
+         alert("We cant search in future! Please put correct value! ");  
+         yrInput.value="";
   }
     else {
-        year=object.value;
+        year=yrInput.value;
     }
   }
 
- function maxCheck(opa) {
-    if (opa.value>2 && year==2018) {
-        alert("we dont have articles of future");
-        opa.value="";}
-    else if (opa.value>12) {
-        alert("there is only 12 months in a year");
-          opa.value="";
+ function maxCheck(mthInput) {
+
+     let d = new Date();
+     let m = d.getMonth();
+     let currentMonth=m+1;
+     console.log(currentMonth);
+    
+    if (mthInput.value>currentMonth && year==2018) {
+        alert("We cant search in future! Please put correct values in fields!");
+        mthInput.value="";}
+    else if (mthInput.value>12) {
+        alert("There is only 12 months in a year! Please put correct values!");
+          mthInput.value="";
     }
-   /* else if (opa.value<1) {
+
+   /* else if (mthInput.value<1) {
          alert("there is not 0 month in a year");
-          opa.value="";
+          mthInput.value="";
     }*/
+    else if (mthInput.value<9 && year==1851) {
+        alert("We dont posses archive of articles older than September 1851. Please select some other year and month!");
+        mthInput.value="";
+    }
     else {
-        month=opa.value;
+        month=mthInput.value;
     }
 
 

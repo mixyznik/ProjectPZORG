@@ -1,4 +1,5 @@
-    class Page extends React.Component {
+  /*Main component*/
+class Page extends React.Component {
         
         constructor(props){
         super(props)
@@ -8,31 +9,31 @@
 
                      
         this.onSuccess = this.onSuccess.bind(this);
-         this.handleTableRowClick = this.handleTableRowClick.bind(this);
-         this.refresh = this.refresh.bind(this);
+        this.handleTableRowClick = this.handleTableRowClick.bind(this);
+        this.refresh = this.refresh.bind(this);
         
       }
 
-        handleTableRowClick(item){
-              /*  debugger;*/
-                console.log("Hello from handleTableRowClick!");
-                 this.setState({selectedUser: item})
-            }
+    handleTableRowClick(item){
+              
+        console.log("Hello from handleTableRowClick!");
+        this.setState({selectedUser: item})
+      }
 
 
-      onSuccess(answer){
+    onSuccess(answer){
         /*console.log(answer);*/
         const artic = answer.response.docs.slice(1,21);
         /*console.log(artic)*/
         this.setState({data: artic});
       }
 
-      componentDidMount(){
+    componentDidMount(){
         console.log('PAGE: componentDidMount')
         this.refresh();
       }
-
-      refresh(){
+        /*First API call*/
+    refresh(){
 
         console.log('PAGE: refresh')
 
@@ -46,27 +47,22 @@
 
 
 
-           render(){
-           
-              console.log('PAGE: render')
+    render(){
+    console.log('PAGE: render')
 
-                return (
-                    <div className="page">
-                        <div className="flex-container">
-
-                             <App selectionHandler={this.handleTableRowClick} data={this.state.data} />
-                        </div>
-                       
-
+        return (
+                <div className="page">
+                    <div className="flex-container">
+                         <App selectionHandler={this.handleTableRowClick} data={this.state.data} />
                     </div>
-                );
+                </div>);
             }
 
         }
 
 
-
-const UserDetails=(props)=>{
+/*Old component, not in use in this concept (bilo mi zao da obrisem)*/
+/*const UserDetails=(props)=>{
           const user = props.user;
           console.log(user);
           let headline = "";
@@ -74,7 +70,7 @@ const UserDetails=(props)=>{
           console.log(user.headline);
           if (user.headline) {
             headline = user.headline.main;
-        }
+          }
             return (
             <div>  <p>Details about article: </p>
                     <ul>
@@ -92,42 +88,30 @@ const UserDetails=(props)=>{
             </div>
             );  
 
-        };
+        };*/
 
 
-
+/* Class which continues on main Page class */
 class App extends React.Component {
-
-     
-
-      render(){
-
-         if(this.props.data.length ==0){
-                   
-                  
-                    return  (<img className="bb" id="working" src="./demo1.gif" ></img>)
+      /*If there is still no data, this ensures the "on progress" logo to be shown */
+        render(){
+                if(this.props.data.length ==0){
+                return  (<img className="bb" id="working" src="./demo1.gif" ></img>)
                 }
-         let counter=0;
-        return (
-          <div>
-
-
-          {
-            this.props.data.map( (article) =>(counter=counter+1,  <Article item={article} str={counter} key={article.web_url} url={article.web_url} clickHandler={this.props.selectionHandler}/>) )
-          }
-
-          </div>
-        );
-      }
-
-   }
+                let counter=0;
+                return (
+                       <div>
+{this.props.data.map( (article) =>(counter=counter+1,  <Article item={article} str={counter} key={article.web_url} url={article.web_url} clickHandler={this.props.selectionHandler}/>) )}
+                       </div>);
+            }
+    }
      
     
-  
+  /* Class which continues on App class */
 class Article extends React.Component {
 
-    constructor(props){
-      super(props)
+      constructor(props){
+      super(props)           
       this.state = {data: {}, style: {display:'none'}, minH: {minHeight:''},
                               h2: {height:''}, 
                               details:{det:'Click for details!'},
@@ -138,55 +122,44 @@ class Article extends React.Component {
 
     }
 
-    onSuccess(answer){
+      onSuccess(answer){
         /* console.log(answer);*/
          this.setState({data: answer});   
     }   
     
       handleClick(){
-               /*let msg = "User details:\n";
-                msg += " -" + this.state.data.description + ",\n";
-              
-                alert(msg);*/
-                
-                  this.props.clickHandler(this.props.item);
-            }
+               
+          this.props.clickHandler(this.props.item);
+    }
 
    
-
-  buttonClick() {
+    /* onClick method that ensures hidden div with details to be shown, or opposite, the div with details to be hidden*/
+      buttonClick() {
    
-    if (this.state.style.display === "none" ) {
+        if (this.state.style.display === "none" ) {
             this.state.style.display = " ";
             this.state.minH.minHeight='300px';
             this.state.h2.height='auto';
-             this.state.details.det='***Click to hide details!***';
+            this.state.details.det='***Click to hide details!***';
             this.state.color.backgroundColor='#ca4646';
             this.state.color.color='white';
             this.state.divWrap.backgroundColor="#ebc4a3";
-
         }       
 
-  else {
+        else {
             this.state.style.display = "none";
-         
-              this.state.h2.height='';
-              this.state.details.det='Click for details!';
-              this.state.color.backgroundColor='#eee';
-              this.state.color.color='blue';
-              this.state.divWrap.backgroundColor='';
+            this.state.h2.height='';
+            this.state.details.det='Click for details!';
+            this.state.color.backgroundColor='#eee';
+            this.state.color.color='blue';
+            this.state.divWrap.backgroundColor='';
         }
 
  
 
 }
-
-
- 
-
-
-
-    componentDidMount(){
+      /*Second API call*/
+      componentDidMount(){
 
         $.ajax({
          /* url: `https://api.linkpreview.net/?key=5a8c6f397e808b560f6b4a8e44ba5736d6ff6aa644f25&q=${this.props.url}`,*/
@@ -194,71 +167,66 @@ class Article extends React.Component {
           success: this.onSuccess
         })
 
-    }
+        }
 
-    
-    render(){
-
-   
-
-
-     /* console.log(this.state.data.url);
-       console.log(this.state.data);*/
-         const user = this.props.item;
+ /*Renders articles from search with title, description and image, and onClick shows hidden div with details from NY Times API*/
+      render(){
+        console.log(this.props.clickHandler);
+      /* console.log(this.state.data.url);
+        console.log(this.state.data);*/
+        const user = this.props.item;
         console.log(user);
         console.log(this.props.str);
         const clickHandler = this.props.clickHandler;
       return (  
-        <div className="flexi"  onClick={() => clickHandler(user)}>
-             <div id="wrap" onClick={this.buttonClick.bind(this)}  style={{backgroundColor: this.state.divWrap.backgroundColor}}>
-              <div id="wraptext">
-          <p>Article number: {this.props.str}</p><br/>   
-          <h3 >{this.state.data.title}</h3><br/>
-          <p >{this.state.data.description}</p><br/>
-              </div>
-          <img  className="aa" id="imm" src={this.state.data.image} ></img>
-        <button className="collapsible"  style={{backgroundColor: this.state.color.backgroundColor, color: this.state.color.color}}>{this.state.details.det}</button><br/>
+             <div className="flexi"  onClick={() => clickHandler(user)}>
+               <div id="wrap" onClick={this.buttonClick.bind(this)}  style={{backgroundColor: this.state.divWrap.backgroundColor}}>
+                 <div id="wraptext">
+                   <p>Article number: {this.props.str}</p><br/>   
+                   <h3 >{this.state.data.title}</h3><br/>
+                   <p >{this.state.data.description}</p><br/>
+                 </div>
+                   <img  className="aa" id="imm" src={this.state.data.image} ></img>
+                   <button className="collapsible"  style={{backgroundColor: this.state.color.backgroundColor, color: this.state.color.color}}>{this.state.details.det}</button><br/>
+               </div>
+                   <div className="content" style={{display:this.state.style.display, minHeight: this.state.minH.minHeight, height:this.state.h2.height}} >
+                   <div>
+                       <ul id="ull" >
+                          <li>Source: {user.source}</li>
+                          <li>Section name: {user.section_name}</li>
+                          <li>Desk: {user.news_desk}</li>
+                          <li>Document: {user.document_type}</li>
+                          <li>Type: {user.type_of_material}</li>
+                          <li>Words: {user.word_count}</li>
+                          <li>Published: {user.pub_date}</li>
+                          <li>Snippet: {user.snippet}</li>
+                          <li>URL:<a target="_blank" href= {user.web_url}>{user.web_url}</a></li> 
+                       </ul>
+                   </div>
+                   </div>
              </div>
-        <div className="content" style={{display:this.state.style.display, minHeight: this.state.minH.minHeight, height:this.state.h2.height}} >
-        <div>
-              <ul id="ull" >
-                       
-                        <li>Source: {user.source}</li>
-                        <li>Section name: {user.section_name}</li>
-                        <li>Desk: {user.news_desk}</li>
-                        <li>Document: {user.document_type}</li>
-                        <li>Type: {user.type_of_material}</li>
-                        <li>Words: {user.word_count}</li>
-                        <li>Published: {user.pub_date}</li>
-                        <li>Snippet: {user.snippet}</li>
-                        <li>URL:<a target="_blank" href= {user.web_url}>{user.web_url}</a></li> 
-                        
-                                                
-                       
-                        
-                    </ul>
-        </div>
-        </div>
-        </div>
-
-      );
-    }
+             );
+           }
 }
+
+
+
+/*This part of code below enables that year and month inputs will be filled only with corect vaules*/
+/*Also it enables Search button to work normally*/
+/*It enabless to show progress after every search*/
 
 var page;
 
-/*console.log(a);*/
-
 function search() {
-var a=document.getElementById('msg').value;
+let a=document.getElementById('msg').value;
 let b=document.getElementById('msg1').value;
   if(a==="" || b==="") {
-    alert("put year and month in fields");
+    alert("Put correct year and month in input fields!");
  
   }
   else if(a.length==3 || a.length==2 || a.length==1) {
     console.log(a);
-    alert('put correct values');
+    alert('Put correct values in input fields!');
     a="";
   }
   else {
