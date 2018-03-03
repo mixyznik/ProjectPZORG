@@ -165,8 +165,10 @@ class Article extends React.Component {
                  <h3>{this.state.data.title}</h3><br/>
                  <p>{this.state.data.description}</p><br/>
                </div>
+               <div id="imgbutWrap">
                  <img  className="aa" id="imm" src={this.state.data.image} ></img>
                  <button className="collapsible"  style={{backgroundColor: backgroundColor, color: color}}>{btnTitle}</button><br/>
+             </div>
              </div>
                  <div className="content" style={{display: display, minHeight: minHeight, height: height}} >
                  <div>
