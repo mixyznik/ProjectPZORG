@@ -1,5 +1,5 @@
 body {
-        background-image: url("./Jumbo.jpg");
+        background-image: url("./backgroundbody.jpg");
         background-repeat: no-repeat, repeat;
         background-color: #cccccc;
         background-size: cover;
@@ -48,7 +48,7 @@ body {
        min-height: 400px;
        display: inline-flex; 
        flex-flow: row wrap;
-       background-image: url("./paper.jpg");
+       background-image: url("./backgroundarticle.jpg");
        background-repeat: no-repeat, repeat;
        background-size: cover;
        font-size: 12px;
@@ -106,7 +106,7 @@ p {
       width: 100%;
       color: white;
       text-align: center;
-      background-image: url("./paperhead.jpg");
+      background-image: url("./HeaderFooter.jpg");
       background-repeat: no-repeat, repeat;
       background-color: #cccccc;
       background-size: cover;
@@ -118,7 +118,7 @@ p {
     }   
  .header {
       padding: 10px 16px;
-      background-image: url("./paperhead.jpg");
+      background-image: url("./HeaderFooter.jpg");
       background-repeat: no-repeat, repeat;
       background-color: #cccccc;
       background-size: cover;
@@ -174,7 +174,7 @@ p {
        min-height: 400px;
        display: inline-flex; 
        flex-flow: row wrap;
-       background-image: url("./paper.jpg");
+       background-image: url("./backgroundarticle.jpg");
        background-repeat: no-repeat, repeat;
        background-size: cover;
        font-size: 12px;
@@ -197,7 +197,7 @@ p {
     }  
      .header {
       
-      background-image: url("./paperhead.jpg");
+      background-image: url("./HeaderFooter.jpg");
       background-repeat: no-repeat, repeat;
       background-color: #cccccc;
       background-size: cover;
@@ -261,7 +261,7 @@ p {
        min-height: 300px;
        display: inline-flex; 
        flex-flow: row wrap;
-       background-image: url("./paper.jpg");
+       background-image: url("./backgroundarticle.jpg");
        background-repeat: no-repeat, repeat;
        background-size: cover;
        font-size: 12px;
@@ -284,7 +284,7 @@ p {
     }  
      .header {
       /*padding: 10px 16px;*/
-      background-image: url("./paperhead.jpg");
+      background-image: url("./HeaderFooter.jpg");
       background-repeat: no-repeat, repeat;
       background-color: #ccbb7e;
       background-size: cover;
@@ -349,7 +349,7 @@ margin-bottom: 40px;
       min-height: 400px;
       display: inline-flex; 
       flex-flow: row wrap;
-      background-image: url("./paper.jpg");
+      background-image: url("./backgroundarticle.jpg");
       background-repeat: no-repeat, repeat;
       background-size: cover;
       font-size: 12px;
@@ -372,7 +372,7 @@ margin-bottom: 40px;
     }  
      .header {
     /*  padding: 10px 16px;*/
-      background-image: url("./paperhead.jpg");
+      background-image: url("./HeaderFooter.jpg");
       background-repeat: no-repeat, repeat;
       background-color: #cccccc;
       background-size: cover;
